@@ -17,15 +17,15 @@ import warnings
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 # get_ipython().system('pip install pyttsx3')
-import pyttsx3
+# import pyttsx3
 #starting 
-engine = pyttsx3.init()
+# engine = pyttsx3.init()
 
-def text_to_speech(text):
-    engine.setProperty('rate', 150)    # Speed percent (can go over 100)
-    engine.setProperty('volume', 0.9)  # Volume 0-1
-    engine.say(text)
-    engine.runAndWait()
+# def text_to_speech(text):
+#     engine.setProperty('rate', 150)    # Speed percent (can go over 100)
+#     engine.setProperty('volume', 0.9)  # Volume 0-1
+#     engine.say(text)
+#     engine.runAndWait()
 
 #loading the training and testing dataset
 training = pd.read_csv('Training.csv')
