@@ -1,0 +1,36 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+
+# IDE/editor configurations
+.vscode/
+.idea/
+
+# macOS system files
+.DS_Store
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Data files (you can specify your datasets or large files here)
+*.csv
+*.xlsx
+*.json
+
+# Environment variable files (for storing secrets, API keys, etc.)
+.env
+
+# Build and distribution files
+build/
+dist/
+*.egg-info/
