@@ -352,6 +352,7 @@ def tree_to_code(tree, feature_names):
     # engine.say("Enter the symptom you are experiencing.")
 
     disease_input=st.text_input("Enter the symptoms you are experiencing :",key="disease_input")
+    disease_input = disease_input.lower()
     if not disease_input:
         st.warning("please Enter a symptom")
         st.stop()
@@ -414,6 +415,7 @@ def tree_to_code(tree, feature_names):
                 st.info(f"{syms}? : ") #ASK FOR RELEVEANT SYMPTOMS 
                 
                 inp=st.text_input("Any Relevant Symptoms as per previous input?",key=counter)
+                inp = inp.lower()
                 counter+=1
                 if not inp:
                     st.warning("Input required [yes/no]")
