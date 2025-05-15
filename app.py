@@ -476,7 +476,13 @@ def getMedicine(disease):
     if disease in medicineDictionary:
         st.info(f"Recommended medicine for {disease}: {medicineDictionary[disease]}") #OUTPUT MEDICINE 
         pharma_link = f"https://www.pharmeasy.in/search/all?name={medicineDictionary[disease].replace(' ', '%20')}"
-        st.markdown(f"[Buy {medicineDictionary[disease]} on PharmEasy]({pharma_link})", unsafe_allow_html=True)
+        # st.markdown(f"[Buy {medicineDictionary[disease]} on PharmEasy]({pharma_link})", unsafe_allow_html=True)
+        medicines = medicineDictionary[disease].split(" and ")
+        for med in medicines:
+            med_clean = med.strip()
+            pharma_link = f"https://pharmeasy.in/search/all?name={med_clean.replace(' ', '%20')}"
+            st.markdown(f"[Buy {med_clean} on PharmEasy]({pharma_link})", unsafe_allow_html=True)
+
         st.markdown(f"[Consult a Doctor for {disease} on PharmEasy](https://pharmeasy.in/doctor-consultation/landing?src=homecard)", unsafe_allow_html=True)
     else:
         st.info(f"No medicine information available for {disease}") #OUTPUT NO MEDICINE
